@@ -64,16 +64,14 @@
       height: 200px;
       position: relative;
       transform-style: preserve-3d;
-      animation: tech-spin 20s infinite ease-in-out;
+      animation: tech-spin 25s infinite ease-in-out;
     }
     .cube .face {
       position: absolute;
       width: 200px;
       height: 200px;
-      /* Glassmorphism effect */
       background: rgba(255, 255, 255, 0.1);
       backdrop-filter: blur(8px);
-      /* Neon border & glow */
       border: 1px solid rgba(0, 229, 255, 0.7);
       box-shadow:
         inset 0 0 10px rgba(0, 229, 255, 0.5),
@@ -235,7 +233,7 @@
     let angle = 135;
     setInterval(() => {
       angle = (angle + 1) % 360;
-      document.body.style.backgroundImage = \`linear-gradient(\${angle}deg, var(--color-top-left) 0%, var(--color-top-right) 35%, var(--color-blend-mid) 60%, var(--color-bottom-right) 100%)\`;
+      document.body.style.backgroundImage = `linear-gradient(${angle}deg, var(--color-top-left) 0%, var(--color-top-right) 35%, var(--color-blend-mid) 60%, var(--color-bottom-right) 100%)`;
     }, 20);
     document.addEventListener('DOMContentLoaded', () => {
       const nav = document.querySelector('nav'), hero = document.querySelector('.content');
